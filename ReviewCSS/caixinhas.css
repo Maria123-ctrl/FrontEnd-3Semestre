@@ -1,0 +1,37 @@
+*{
+    /* reset css*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+    section: borda, padding
+*/
+
+
+.sessao-noticias{
+    width: 800px;
+    height: 920px;
+    margin: auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 1px dashed salmon;
+}
+/*
+    article: cor de fundo, cor do texto
+*/
+.noticia{
+    width: 150px;
+    height: 150px;
+    background-color: salmon;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
