@@ -1,0 +1,109 @@
+@font-face{
+    font-family: Architectcs;
+    src: url(../css/fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #6f1b51, #edb6d9, #d38ee6 );
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid white; */
+}
+.container--flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-header__image-perfil{
+    width: 100px;
+    padding: 20px;
+    
+    box-shadow: 1px 1px 7px #240826;
+}
+.form-header__titulo{
+    color: #240826;
+    font-family: Architectcs, sans-serif;
+}
+
+.form-header__text{
+    font-family: 'Coursier New', Coursier, monospace;
+}
+
+/* Formulário de contrato */
+.form-contact{
+    padding: 20px;
+}
+
+.form-contact__linha{
+    display: flex;/* uma do lado da outra */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    /* height: 60px; */
+    /* border: 1px solid greenyellow; */
+}
+
+.form-contact__col-a{
+    width: 10%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+.form-contact__col-b{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.form-contact__label{
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Coursier New ', 'Courier New', Courier, monospace;
+}
+.form-contact__input{
+    padding: 5px 10px;
+    height: 35px;
+    color: #6f1b51;
+    border: none;
+    box-shadow: 0 0 10px rgb(255, 255, 255, 0.2);
+    outline: none;
+    border-radius: 3px;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.form-contact__input::placeholder{
+    color: #6f1b51;
+}
+.form-contact__input:focus{
+    background-color: #6f1b51;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+.form-contact__input--metade{
+    /* deixar um espaço pra trabalhar entre eles */
+    width: 48%;
+}
+.form-contact__input--inteiro{
+    /* deixar um espaço pra trabalhar entre eles */
+    width: 100%;
+}
+.form-contact__input--terco{
+    /* deixar um espaço pra trabalhar entre eles */
+    width: 25%;
+}
