@@ -10,8 +10,8 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(to bottom, #6f1b51, #edb6d9, #d38ee6 );
 }
 .container{
@@ -49,7 +49,7 @@ body {
 
 .form-contact__linha{
     display: flex;/* uma do lado da outra */
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     margin-bottom: 15px;
@@ -105,5 +105,78 @@ body {
 }
 .form-contact__input--terco{
     /* deixar um espaço pra trabalhar entre eles */
+    width: 30%;
+}
+
+.form-contact__input--quarto{
     width: 25%;
+}
+
+.form-contact__input--anotacoes{
+    width: 100%;
+    height: 200px;
+    
+
+}
+
+.form-contact__linha-botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.btn{
+    border-radius: 5px;
+    color: #6f1b51; 
+    background-color: transparent;
+    border: 2px solid #6f1b51;
+    width: 40%;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+@media (max-width: 768px) {
+  .form-contact__linha {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .form-contact__col-a {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .form-contact__col-b {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-contact__input--metade {
+    width: 100%;
+    max-width: 100%;
+  }
+  .form-contact__input--terco {
+    width: 100%;
+    max-width: 100%;
+  }
+  .form-contact__input--quarto {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  
+  .btn {
+    width: 100%;
+    padding: 12px;
+  }
 }
