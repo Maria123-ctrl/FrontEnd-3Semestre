@@ -52,12 +52,12 @@
                     </div>
 
                     <div class="form-contact__col-b">
-                        <input class="form-contact__input form-contact__input--terco" type="text" id="+55" name="nEstado"
+                        <input class="form-contact__input form-contact__input--terco" type="text" id="País" name="Pais"
                             placeholder="+55">
                         <input class="form-contact__input form-contact__input--terco" type="text" id="DDD" name="DDD"
                             placeholder="DDD">
-                        <input class="form-contact__input form-contact__input--terco" type="text" id="ex: 5555-5555"
-                            name="ex: 5555-5555" placeholder="ex: 5555-5555">
+                        <input class="form-contact__input form-contact__input--terco" type="text" id="Telefone"
+                            name="Telefone" placeholder="ex: 5555-5555">
                     </div>
                 </div>
                 <div class="form-contact__linha">
@@ -66,12 +66,12 @@
                     </div>
 
                     <div class="form-contact__col-b">
-                        <input class="form-contact__input form-contact__input--quarto" type="number" id="CEP:02346-726"
-                            name="CEP:02346-726" placeholder="CEP:02346-726">
-                        <input class="form-contact__input form-contact__input--metade" type="text" id="Rua lá"
-                            name="Rua lá" placeholder="Rua lá">
-                        <input class="form-contact__input form-contact__input--quarto" type="text" id="ex: 5555"
-                            name="ex: 5555" placeholder="ex: 5555">
+                        <input class="form-contact__input form-contact__input--quarto" type="number" id="CEP"
+                            name="CEP" placeholder="CEP:02346-726" onblur="buscarEndereco(this.value);">
+                        <input class="form-contact__input form-contact__input--metade" type="text" id="RuaCasa"
+                            name="RuaCasa" placeholder="Rua lá">
+                        <input class="form-contact__input form-contact__input--quarto" type="text" id="nCasa"
+                            name="nCasa" placeholder="ex: 5555">
                     </div>
                 </div>
                 <div class="form-contact__linha">
@@ -80,8 +80,8 @@
                     </div>
 
                     <div class="form-contact__col-b">
-                        <input class="form-contact__input form-contact__input--terco" type="text" id="Apt 7 Bloco 2"
-                            name="Apt 7 Bloco 2" placeholder="Apt 7 Bloco 2">
+                        <input class="form-contact__input form-contact__input--terco" type="text" id="Complemento"
+                            name="Complemento" placeholder="Apt 7 Bloco 2">
                         <input class="form-contact__input form-contact__input--terco" type="text" id="Bairro"
                             name="Bairro" placeholder="Bairro">
                         <input class="form-contact__input form-contact__input--terco" type="text" id="Cidade"
@@ -106,7 +106,7 @@
 
                     <div class="form-contact__col-b">
                         <textarea class="form-contact__input form-contact__input--anotacoes" type="text"
-                            id="Suas anotações aqui" name="Suas anotações aqui"
+                            id="Anotações" name="Anotações"
                             placeholder="Suas anotações aqui"></textarea>
 
                     </div>
@@ -117,7 +117,7 @@
                         <label class="form-contact__label" for=""></label>
                     </div>
                     <div class="form-contact__col-b form-contact__linha-botao">
-                        <input class="form-contact__input  form-contact__input--metade btn" onclick="validarFormulario()" type="submit" value="Cadastrar">
+                        <input class="form-contact__input  form-contact__input--metade btn" onclick="validarFormulario()" type="button" value="Cadastrar">
                         <input class="form-contact__input  form-contact__input--metade btn" type="submit" value="Limpar">
             
                     </div>

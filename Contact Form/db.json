@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "contatos": [
+    {
+      "id": "1",
+      "nome": "Eduardo",
+      "sobrenome": "Mendes Da Costa"
+    },
+    {
+      "id": "2",
+      "nome": "Maria",
+      "sobrenome": "Freitas"
+    },
+    {
+      "nome": "Rozi",
+      "sobrenome": "Marta",
+      "id": "RByi9DyZ2SA"
+    },
+    {
+      "nome": "ww",
+      "sobrenome": "ww",
+      "id": "cGpdt1ZbmUc"
+    },
+    {
+      "nome": "aaa",
+      "sobrenome": "ccc",
+      "id": "1t3bR5WBJII"
+    },
+    {
+      "nome": "ddd",
+      "sobrenome": "cccc",
+      "id": "RHYGiq9cadM"
+    },
+    {
+      "nome": "ppp",
+      "sobrenome": "qqq",
+      "id": "ThLCVErFOV8"
+    },
+    {
+      "nome": "ddd",
+      "sobrenome": "bbb",
+      "Email": "dudugamil",
+      "País": "55",
+      "DDD": "11",
+      "Telefone": "965062772",
+      "CEP": "04257245",
+      "RuaCasa": "Avenida Marginal",
+      "nCasa": "2372",
+      "Complemento": "",
+      "Bairro": "Vila Cristália",
+      "Cidade": "São Paulo",
+      "Estado": "São Paulo",
+      "Anotações": "",
+      "id": "DQ-_U-lxsDU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
