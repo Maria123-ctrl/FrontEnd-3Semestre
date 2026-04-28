@@ -85,5 +85,49 @@
       "Curtidas": 430
     }
   ],
+  "calculadora": [
+    {
+      "n1": 4,
+      "n2": 5,
+      "op": "multiplicacao",
+      "resultado": "20.00",
+      "id": "LidEXDcel7M"
+    },
+    {
+      "n1": 4,
+      "n2": 5,
+      "op": "multiplicacao",
+      "resultado": "20.00",
+      "id": "D1lFjYWiu1Y"
+    },
+    {
+      "n1": 4,
+      "n2": 5,
+      "op": "multiplicacao",
+      "resultado": "20.00",
+      "id": "pQsT31evgOo"
+    },
+    {
+      "n1": 110,
+      "n2": 92,
+      "op": "divisao",
+      "resultado": "1.20",
+      "id": "lgYXZDz2C34"
+    },
+    {
+      "n1": 55,
+      "n2": 58,
+      "op": "soma",
+      "resultado": "113.00",
+      "id": "a9E9MqCU37k"
+    },
+    {
+      "n1": 10,
+      "n2": 10,
+      "op": "subtracao",
+      "resultado": "0.00",
+      "id": "eWmQzS_QhJo"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
