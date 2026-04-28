@@ -1,0 +1,89 @@
+{
+  "usuario": [
+    {
+      "id": "1",
+      "nome": "dudu Costa",
+      "idade": 43,
+      "email": "edu@edu.com"
+    },
+    {
+      "id": "2",
+      "nome": "Mário Costa",
+      "idade": 35,
+      "email": "mario@oo.com"
+    },
+    {
+      "id": "IAHTD8XWMMo",
+      "nome": "Dudinha",
+      "idade": 17,
+      "email": "mais@maiss.com"
+    },
+    {
+      "id": "7S_g9C9NmmI",
+      "nome": "Stephaninha",
+      "idade": 17,
+      "email": "muito@muitoo.com"
+    }
+  ],
+  "frutas": [],
+  "jogos": [],
+  "imc": [
+    {
+      "nome": "Maria",
+      "altura": 1.6,
+      "peso": 50,
+      "IMC": "19.53",
+      "situacao": "Saudável",
+      "id": "L3f0WWUCDI8"
+    },
+    {
+      "nome": "Stephani",
+      "altura": 1.55,
+      "peso": 50,
+      "IMC": "20.81",
+      "situacao": "Saudável",
+      "id": "FELvG5VtWf8"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.77,
+      "peso": 48,
+      "IMC": "15.32",
+      "situacao": "Magreza grave",
+      "id": "W_RipOs0OzQ"
+    },
+    {
+      "nome": "Júlia",
+      "altura": 1.58,
+      "peso": 60,
+      "IMC": "24.03",
+      "situacao": "Saudável",
+      "id": "sY5gEDit6zE"
+    },
+    {
+      "nome": "maria",
+      "altura": 1.6,
+      "peso": 50,
+      "IMC": "19.53",
+      "situacao": "Saudável",
+      "id": "aHlj0EiQ3UI"
+    },
+    {
+      "nome": "marcos",
+      "altura": 1.64,
+      "peso": 65,
+      "IMC": "24.17",
+      "situacao": "Saudável",
+      "id": "EaPIzRmUJTg"
+    }
+  ],
+  "Post": [
+    {
+      "id": "1",
+      "texto": "chique e elegante, dos pés a cabeça",
+      "Imagem": "https://static01.nyt.com/images/2016/01/28/arts/RIHANNA1/RIHANNA-superJumbo.jpg",
+      "Curtidas": 430
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
