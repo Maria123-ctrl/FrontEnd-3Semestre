@@ -1,8 +1,19 @@
 {
-    "frutas" : [
-
-        {"id" : 1, "nome" : "Abacaxi", "quantidade": 10},
-        {"id" : 2, "nome" : "Limão", "quantidade": 50}
-    ]
-    
+  "produtos": [
+    {
+      "titulo": "Geladeira Quente",
+      "descricao": "Muito BRILHANTE",
+      "preco": 1000,
+      "imagem": "herocopy.png",
+      "id": "87__9NticKc"
+    },
+    {
+      "titulo": "tenis quatrado",
+      "descricao": "quatrado",
+      "preco": 1234,
+      "imagem": "herocopy.png",
+      "id": "GZ6HmGTVsCk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
