@@ -8,11 +8,67 @@
       "id": "87__9NticKc"
     },
     {
-      "titulo": "tenis quatrado",
-      "descricao": "quatrado",
-      "preco": 1234,
+      "titulo": "Geladeira Quente",
+      "descricao": "Muito BRILHANTE",
+      "preco": 0,
       "imagem": "herocopy.png",
-      "id": "GZ6HmGTVsCk"
+      "id": "1f_g01dH8Ws"
+    },
+    {
+      "titulo": "Cookie Topadfadf",
+      "descricao": "lindo ",
+      "preco": 599,
+      "imagem": "herocopy.png",
+      "id": "ije4rHPE7WE"
+    },
+    {
+      "titulo": "Cookie Topadfadf",
+      "descricao": "lindo",
+      "preco": 100,
+      "imagem": "herocopy.png",
+      "id": "wk4GPYTyR78"
+    },
+    {
+      "titulo": "Eduardo",
+      "descricao": "gay",
+      "preco": 50000,
+      "imagem": "herocopy.png",
+      "id": "NeUlVEshH_Q"
+    },
+    {
+      "titulo": "Eduardo",
+      "descricao": "gay",
+      "preco": 50000,
+      "imagem": "herocopy.png",
+      "id": "tWG0YhxsjUc"
+    },
+    {
+      "titulo": "Eduardo",
+      "descricao": "gay",
+      "preco": 50000,
+      "imagem": "herocopy.png",
+      "id": "mMgOUb9xT1w"
+    },
+    {
+      "titulo": "Eduardo",
+      "descricao": "gay",
+      "preco": 50000,
+      "imagem": "herocopy.png",
+      "id": "mcQnzJEC2P0"
+    },
+    {
+      "titulo": "Maria",
+      "descricao": "lindonaa",
+      "preco": 300000000000,
+      "imagem": "herocopy.png",
+      "id": "iMC_y5OeWb0"
+    },
+    {
+      "titulo": "Maria",
+      "descricao": "eu",
+      "preco": 30000000000000000,
+      "imagem": "herocopy.png",
+      "id": "Hu-YmhHjwfk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
