@@ -11,7 +11,7 @@ import Botao from "../botao/Botao";
 const Cadastro = (props) => {
     return (
         <section className="section_cadastro">
-            <form onSubmit={props.editarfuncCadastro} className="layout_grid form_cadastro">
+            <form onSubmit={props.funcCadastro} className="layout_grid form_cadastro">
                 <h1>{props.tituloCadastro}</h1>
                 <hr />
                 <div className="campos_cadastro">
@@ -26,14 +26,19 @@ const Cadastro = (props) => {
                     </div>
                     <div className="campo_cad_genero" style={{ display: props.visibilidade }}>
                         <label htmlFor="genero">Gênero</label>
-                        <select name="genero" id="">
+                        <select name="genero" id="genero">
                             <option value="" disabled >Selecione</option>
                             <option value="">op 1</option>
                             <option value="">op 2</option>
                             <option value="">op 3</option>
                         </select>
                     </div>
-
+                    {
+                        props.btnEditar && <Botao nomeDoBotao="Cancelar"
+                        cancelarEdicao={props.cancelarEdicao}
+                        btnEditar={props.btnEditar}
+                        />
+                    }
                     <Botao nomeDoBotao="Cadastrar" />
                 </div>
             </form>

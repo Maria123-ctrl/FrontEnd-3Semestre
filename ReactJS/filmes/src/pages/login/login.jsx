@@ -1,8 +1,13 @@
+import Header from "../../components/header/Header"
 import "./login.css"
 
 const Login = () => {
     return (
-        <h1>Página de login</h1>
+       <> 
+       <Header />
+       <h1>Página Login</h1>
+       <footer />
+       </>
     )
 }
 
