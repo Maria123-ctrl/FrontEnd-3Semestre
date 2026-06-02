@@ -1,5 +1,5 @@
 import "./Alerta.css"
-
+import Swal from "sweetalert2";
 export const Alerta = ({
     title, 
     text, 
@@ -11,16 +11,16 @@ export const Alerta = ({
     cancelButtonColor = "red",
 
 }) => {
-    return Swal.fire({
-                title: title,
-                text : text,
-                icon: icon,
-                showCancelButton : showCancelButton != null ? showCancelButton : undefined,
-                confirmButtonText : confirmButtonText != null ? confirmButtonText : undefined,
-                cancelButtonText : cancelButtonText != null ? cancelButtonText : undefined,
-                confirmButtonColor: "green",
-                cancelButtonColor: "red"
-            });
+    return (Swal.fire({
+                title,
+                text,
+                icon,
+                showCancelButton : showCancelButton,
+                confirmButtonText : confirmButtonText,
+                cancelButtonText : cancelButtonText,
+                confirmButtonColor: confirmButtonColor,
+                cancelButtonColor: cancelButtonColor
+            }));
     
 };
 

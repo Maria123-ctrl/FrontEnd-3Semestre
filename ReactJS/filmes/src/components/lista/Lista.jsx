@@ -3,6 +3,7 @@ import "./Lista.css";
 // Importação de imagens:
 import Editar from "../../assets/img/pen-to-square-solid.svg";
 import Excluir from "../../assets/img/trash-can-regular.svg";
+import { apiPort } from "../../services/services";
 
 const Lista = (props) => {
     return (
@@ -18,6 +19,7 @@ const Lista = (props) => {
                             {/* tr => table row */}
                             <tr className="table_cabecalho">
                                 {/* th => table head */}
+                                <th style={{display: props.visibilidade}}>Imagem</th>
                                 <th>Nome</th>
                                 <th style={{ display: props.visibilidade }}>Gênero</th>
                                 <th>Editar</th>
@@ -33,6 +35,11 @@ const Lista = (props) => {
                                     <tr className="item_lista" key={item.idGenero}>
                                         {/* {console.log(index)} */}
                                         {/* {console.log(item.idGenero)} */}
+                                        <td data-cell="Imagem" style={{display: props.visibilidade}}>
+                                            <img src={`https://localhost:${apiPort}/images/${item.imagem}`} alt="imagem do filme" 
+                                            style={{display: props.visibilidade}}/>
+                                        </td>
+
                                         <td data-cell="Nome">
                                             {/* Primeira célula da linha: mostra o nome (se for gênero) ou título (se for filme) */}
                                             {/* titulo == filme */}
@@ -41,7 +48,7 @@ const Lista = (props) => {
                                         <td data-cell="Gênero" style={{ display: props.visibilidade }}>
                                             {/* Segunda célula: mostra o nome do gênero caso o tipo da lista seja "filme".*/}
                                             {/* adicionar essa linha depois de fazer o metd de lista filme: */}
-                                            {props.tipoLista === "filme" ? (item.genero?.nome || '-') : '-'}
+                                            {props.tipoLista === "filme" ? (item.idGeneroNavigation?.nome || '-') : '-'}
                                         </td>
                                         <td data-cell="Editar">
                                             <button className="icon" onClick={() => (props.funcEditar(item))}>

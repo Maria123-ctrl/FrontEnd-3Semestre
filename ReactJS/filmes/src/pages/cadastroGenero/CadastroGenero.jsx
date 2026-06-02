@@ -54,7 +54,8 @@ const CadastroGenero = () => {
                  Alerta({
                 title: "Cadastro de Gênero",
                 text : "Gênero Cadastrado com Sucesso",
-                icon: "success"
+                icon: "success",
+                confirmButtonText: "Ok"
             })
                 // alert(`Gênero ${objCadastro.Nome} cadastrado com sucesso`)
                 limparFormulario()
@@ -100,9 +101,10 @@ const CadastroGenero = () => {
             Alerta({
                 title: "Atualização de Gênero",
                 text : "Gênero Atualizado com Sucesso!",
-                icon: "success"
+                icon: "success",
+                confirmButtonText: "Ok"
             })
-            console.log(retornoAlerta);
+            // console.log(retornoAlerta);
             limparFormulario();
         } catch (error) {
             console.log(error);
