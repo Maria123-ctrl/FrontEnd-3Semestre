@@ -1,19 +1,10 @@
-import Header from "../../components/header/Header"
 import "./login.css"
-import api from "../../services/services"
-import { useState } from "react";
-
+import Botao from "../../components/botao/Botao"
+import Logo from "../../assets/img/logo.svg"
 
 const Login = () => {
-    const [email, setEmail] = useState("");
-    const [senha, setSenha] = useState("");
-
-    const realizarLogin = async (e) => {
-        e.preventDefault();
-    };
 
     return (
-        <>
             <main className= "main_login">
           <div className="banner"></div>
           <section className="section_login">
@@ -34,7 +25,7 @@ const Login = () => {
             </form>
           </section>
         </main>
-        </>
+        
     )
 }
 
