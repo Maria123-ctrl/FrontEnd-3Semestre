@@ -8,18 +8,48 @@ import Perfil from './components/perfil/Perfil'
 import Home from './components/home/Home'
 import Header from './components/header/Header'
 import Produto from './components/produto/produto'
-
+import CadastroProduto from './components/cadastroproduto/CadastroProduto'
+import ListarProduto from './components/listarproduto/ListarProduto'
+import PrivateRoute from './routes/PrivateRoute'
 function App() {
   return (
     <BrowserRouter>
-    <Header />
+      <Header />
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/perfil" element={<Perfil />}/>
-        <Route path="/produto" element={<Produto />}/>
+        <Route path="/"
+          element={
+            <Home />
+          } />
+        <Route path="/perfil"
+          element={
+
+            <Perfil />
+          } />
+        <Route path="/produto"
+          element={
+            <PrivateRoute>
+              <Produto />
+
+            </PrivateRoute>
+          } />
+
+
+        <Route path="/cadastrarProduto" element={
+          <PrivateRoute>
+            <CadastroProduto />
+          </PrivateRoute>
+
+        } />
+        <Route path="/listarProduto"
+          element={
+            <PrivateRoute>
+              <ListarProduto />
+            </PrivateRoute>
+
+          } />
       </Routes>
     </BrowserRouter>
   )
- }
+}
 
 export default App

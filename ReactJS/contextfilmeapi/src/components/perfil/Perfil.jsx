@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { UsuarioContext } from "../../context/UsuarioContext";
+import "./Perfil.css"
 
 const Perfil = () => {
     // destructuring
@@ -8,15 +9,21 @@ const Perfil = () => {
     const [novoUsuario, setNovoUsuario] = useState()
 
     // ciclo de vida e funções
-
+    // guarda o usuário no localStorage no formato JSON
+    const login = () => {
+        localStorage.setItem("usuario", JSON.stringify(novoUsuario))
+        setUsuario(novoUsuario)
+        setNovoUsuario("")
+    }
     // jsx
     return (
-        <div>
+        <div className="perfil-container">
 
         <h2>Página de Perfil ({usuario})</h2>
 
         <input type="text" 
         placeholder="digite o novo usuário"
+        value={novoUsuario}
         onChange={(e) =>{
             setNovoUsuario(e.target.value)
         }}
@@ -24,9 +31,9 @@ const Perfil = () => {
 
         <button
             onClick={() => {
-                setUsuario(novoUsuario)
+                login()
             }}
-        >Trocar Usuário</button>
+        >Entrar</button>
         <p>Novo Usuário: <strong>{novoUsuario}</strong></p>
         </div>
     )
