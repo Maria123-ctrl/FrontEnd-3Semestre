@@ -1,57 +1,110 @@
-import "./Login.css";
 import Logo from "../../assets/img/logo.svg";
-import Botao from "../../components/botao/Botao";
-import Header from "../../components/header/Header";
-import Fotter from "../../components/footer/Footer";
-import { EmailContext } from "../../context/email/EmailContext";
-import { SenhaContext } from "../../context/senha/SenhaContext";
-import { useContext, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import "./Login.css";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Botao from "../../components/botao/Botao.jsx";
+import { UsuarioContext } from "../../context/UsuarioContext.jsx";
+import { jwtDecode } from "jwt-decode";
+import { Alerta } from "../../components/alerta/Alerta.jsx";
+import api from "../../services/services.js";
 
 const Login = () => {
-    const { email, setEmail } = useContext(EmailContext);
-    const [ novoEmail, setNovoEmail ] = useState("");
-    const { senha, setSenha } = useContext(SenhaContext);
-    const [ novoSenha, setNovoSenha ] = useState("");
+    const { usuario, setUsuario } = useContext(UsuarioContext);
+    const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
     const navigate = useNavigate();
-    const login = () =>{
-        localStorage.setItem("email", JSON.stringify(novoEmail));
-        localStorage.setItem("senha", JSON.stringify(novoSenha));
-        setEmail(novoEmail);
-        setSenha(novoSenha);
-        setNovoEmail("");
-        setNovoSenha("");
-    }
+    const login = async () => {
+        // validação no formulário
+
+        if (email.trim().length == 0 || senha.trim().length == 0) {
+            //deixou de preencher
+            Alerta({
+                title: "Login",
+                text: "Preencher todos os campos",
+                icon: "warning",
+                confirmButtonText: "OK",
+            });
+            return false;
+        }
+
+        const dadosLogin = {
+            email: email,
+            senha: senha,
+        };
+
+        try {
+            const retornoAPI = await api.post("/Login", dadosLogin);
+            console.log("Retorno da API");
+            console.log(retornoAPI.data);
+            // pega o token que retornou da API
+            const token = await retornoAPI.data.token
+
+            // decodifica o token
+            const usuarioDecoded = jwtDecode(token)
+            console.log(usuarioDecoded);
+
+            // guarda os dados na Context do Usuário (global)
+            setUsuario(usuarioDecoded);
+            // guarda os dados no navegador localStorage
+            localStorage.setItem("usuario", JSON.stringify(usuarioDecoded)); // pegar o dado e colocar no storage
+            // limpa os campos do formulário
+            setEmail("");
+            setSenha("");
+            // envia o usuário logado para a rota de gêneros
+            navigate("/filmes");
+
+        } catch (error) {
+            console.log(error);
+
+            Alerta({
+                title: "Login",
+                text: "Usuário ou senha inválidos",
+                icon: "error",
+                confirmButtonText: "OK",
+            });
+        }
+    }//fim do login
+
+
+    const verificaLogin = () => {
+        const logado = JSON.stringify(localStorage.getItem("usuario"));
+
+        if (logado != undefined && logado != null) {
+            setUsuario(usuario);
+        }
+    };
+    useEffect(() => {
+        verificaLogin();
+    }, []);
+
     return (
-        <div className="container">
-            <main className= "main_login">
-          <div className="banner"></div>
-          <section className="section_login">
-            <img src={Logo} alt="Logo do Filmoteca"/>
-            <form action="" className="form_login">
-                <h1>Login</h1>
-                <div className="campos_login">
-                    <div className="campo_input">
-                        <label htmlFor="email">Email:</label>
-                        <input value={novoEmail} onChange={(e) => {setNovoEmail(e.target.value)}} type="email" name="email" placeholder="Digite seu e-mail"/>
+        <main className="main_login">
+            <div className="banner"></div>
+            <section className="section_login">
+                <img src={Logo} alt="Logo do Filmoteca" />
+                <form action="" className="form_login">
+                    <h1>Login</h1>
+                    <div className="campos_login">
+                        <div className="campo_input">
+                            <label htmlFor="email">Email:</label>
+                            <input value={email} onChange={(e) => { setEmail(e.target.value) }}
+                                type="email" name="email" placeholder="Digite seu e-mail" />
+                        </div>
+                        <div className="campo_input">
+                            <label htmlFor="senha">Senha:</label>
+                            <input value={senha} onChange={(e) => { setSenha(e.target.value) }}
+                                type="password" name="senha" placeholder="Digite sua senha" />
+                        </div>
                     </div>
-                    <div className="campo_input">
-                        <label htmlFor="senha">Senha:</label>
-                        <input value={novoSenha} onChange={(e) => {setNovoSenha(e.target.value)}} type="password" name="senha" placeholder="Digite sua senha"/>
-                    </div>
-                </div>
-                <Botao nomeDoBotao="Entrar"  
-                onClick={(e) => {
-                    e.preventDefault();
-                    login()
-                    navigate("/filme");
-                }}    
+                    <Botao nomeDoBotao="Entrar"
+                     onClick={() => {
+                        login()
+                     }}
                     />
-            </form>
-          </section>
+                </form>
+            </section>
         </main>
-        </div>
-    );
+    )
 }
 
-export default Login;
+export default Login; 

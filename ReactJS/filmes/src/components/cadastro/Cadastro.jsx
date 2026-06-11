@@ -1,5 +1,6 @@
 import "./Cadastro.css";
 import Botao from "../botao/Botao";
+import BotaoCadastro from "../botao/BotaoCadastro";
 
 // Destructuring nas props:
 // const Cadastro = ({ 
@@ -67,12 +68,12 @@ const Cadastro = (props) => {
                     </div>
                     
                     {
-                        props.btnEditar && <Botao nomeDoBotao="Cancelar"
+                        props.btnEditar && <BotaoCadastro nomeDoBotao="Cancelar"
                             cancelarEdicao={props.cancelarEdicao}
                             btnEditar={props.btnEditar}
                         />
                     }
-                    <Botao nomeDoBotao="Cadastrar" />
+                    <BotaoCadastro nomeDoBotao="Cadastrar" />
                 </div>
             </form>
         </section>
